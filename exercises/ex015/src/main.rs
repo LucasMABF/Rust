@@ -1,4 +1,5 @@
 use std::collections::HashMap; // HashMaps are not automatically in scope on root
+use ex015;
 
 fn main() {
     // HashMaps
@@ -50,4 +51,17 @@ fn main() {
     for (key, value) in &map{
         println!("{key}: {value}");
     }
+
+    let v = vec![1, 2, 3, 4, 1, 1, 9, 9, 9, 9];
+    let med = ex015::med(&v);
+    println!("{:?}", med);
+    println!("{:?}", v);
+
+    let txt = String::from("Hello how are you today first apple yesterday rust");
+    let pig_latin = ex015::pig_latin(&txt);
+    println!("{}", pig_latin);
+    println!("{}", txt);
+
+    ex015::cli_tool();
+
 }
