@@ -2,9 +2,9 @@ use std::{env, process};
 use ex019::{Config, run};
 
 fn main() {
-    let args: Vec<String> = env::args().collect();
+    let args = env::args();
     
-    let config = Config::build(&args).unwrap_or_else(|err|{
+    let config = Config::build(args).unwrap_or_else(|err|{
         eprintln!("Problem parsing arguments: {err}");
         process::exit(1);
     });
