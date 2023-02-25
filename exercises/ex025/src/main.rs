@@ -1,7 +1,6 @@
 use std::thread;
 use std::time::Duration;
 use std::sync::mpsc;
-use std::sync::Mutex;
 
 fn main() {
     // Concurrency
